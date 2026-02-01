@@ -6,3 +6,9 @@ let targetStock=350
 let weeklyDemand=50
 let supplierLeadTimeWeeks=2
 
+#Calculate Inventory Metrics
+let weeksOfCover = weeklyDemand > 0 ? currentStock / weeklyDemand : Infinity
+let stockDeficit = Math.max(0, targetStock - currentStock);
+let reorderQuantity = (currentStock <= reorderLevel || weeksOfCover < supplierLeadTimeWeeks) ? Math.ceil(stockDeficit) : 0;
+let estimatedReorderCost = reorderQuantity * unitcost;
+let reorderNow = currentStock <= reorderLevel || weeksOfCover < supplierLeadTimeWeeks;
