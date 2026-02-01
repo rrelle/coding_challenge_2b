@@ -12,3 +12,10 @@ let stockDeficit = Math.max(0, targetStock - currentStock);
 let reorderQuantity = (currentStock <= reorderLevel || weeksOfCover < supplierLeadTimeWeeks) ? Math.ceil(stockDeficit) : 0;
 let estimatedReorderCost = reorderQuantity * unitcost;
 let reorderNow = currentStock <= reorderLevel || weeksOfCover < supplierLeadTimeWeeks;
+
+#Console Prints
+console.log(itemName)
+console.log("Weeks of Cover: " + weeksOfCover.toFixed(2)) 
+console.log("Reorder Now: " + (reorderNow ? "Yes" : "No"))
+console.log("Recommended Reorder Quantity: " + reorderQuantity)
+console.log("Estimated Reorder Cost: $" + estimatedReorderCost.toFixed(2))
