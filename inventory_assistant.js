@@ -19,3 +19,4 @@ console.log("Weeks of Cover: " + weeksOfCover.toFixed(2))
 console.log("Reorder Now: " + (reorderNow ? "Yes" : "No"))
 console.log("Recommended Reorder Quantity: " + reorderQuantity)
 console.log("Estimated Reorder Cost: $" + estimatedReorderCost.toFixed(2))
+
